@@ -1,27 +1,28 @@
-function checkDriverAge(){
-var age = prompt("What is your age?");
-
-if (Number(age) < 18) {
-	alert("Sorry, you are too yound to drive this car. Powering off");
-} else if (Number(age) > 18) {
-	alert("Powering On. Enjoy the ride!");
-} else if (Number(age) === 18) {
-	alert("Congratulations on your first year of driving. Enjoy the ride!");
-}
+var user={
+   username:"jim",
+    password:"pam"
 }
 
-checkDriverAge()
+var database=[
+    {
+        username:"jim",
+         password:"pam"
+     }
 
+];
 
-var checkDriverAge2s=function checkDriverAge2(age){
-   var age;
-    if (Number(age) < 18) {
-        alert("Sorry, you are too yound to drive this car. Powering off2");
-    } else if (Number(age) > 18) {
-        alert("Powering On. Enjoy the ride!2");
-    } else if (Number(age) === 18) {
-        alert("Congratulations on your first year of driving. Enjoy the ride!2");
+var newsfeed=[
+    {
+        username:"jim",
+        timeline:"I don't know! you tell me"
+    },
+    {
+        username:"pam",
+        timeline:"hey, jim"
+       
+    },
+    {
+        username:"dwight",
+        timeline:"I am not a security threat"
     }
-    }
-
-var check2=checkDriverAge2s(92)
+]
