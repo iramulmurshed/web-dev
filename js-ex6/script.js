@@ -1,37 +1,56 @@
-var database=[
+var database = [
     {
-        username:"jim",
-         password:"pam"
-     }
-
-];
-
-var newsfeed=[
-    {
-        username:"jim",
-        timeline:"I don't know! you tell me"
+        username: "jim",
+        password: "pam"
     },
     {
-        username:"pam",
-        timeline:"hey, jim"
-       
+        username:"scot",
+        password:"jane"
     },
     {
         username:"dwight",
-        timeline:"I am not a security threat"
+        password:"angela"
+    }
+
+];
+
+var newsfeed = [
+    {
+        username: "jim",
+        timeline: "I don't know! you tell me"
+    },
+    {
+        username: "pam",
+        timeline: "hey, jim"
+
+    },
+    {
+        username: "dwight",
+        timeline: "I am not a security threat"
     }
 ];
 
-var userNamePrompt=prompt("what's your username");
-var passwordPrompt=prompt("what's your password");
+var userNamePrompt = prompt("what's your username");
+var passwordPrompt = prompt("what's your password");
+var databaseLength = database.length;
 
-function signIn(user,pass){
-    if(user===database[0].username && pass===database[0].password)
-    {
-        console.log(newsfeed);
+function isUserValid(user,pass){
+    for (var i = 0; i < databaseLength; i++) {
+        if (user === database[i].username && pass === database[i].password) {
+            return true;
+        }
+    }
+    return false;
+
+}
+
+
+function signIn(user, pass) {
+    if (isUserValid(user,pass)) {
+        console.log(newsfeed)
     }
     else{
-        alert("sorry wrong username or password")
+        alert("sorry try again")
     }
 }
-signIn(userNamePrompt,passwordPrompt);
+signIn(userNamePrompt, passwordPrompt);
